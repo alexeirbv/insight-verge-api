@@ -24,15 +24,16 @@ var home = process.env.INSIGHT_DB || (getUserHome() + '/.insight');
 if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
-  port = '3100';
-  b_port = '22555';
-  p2p_port = '22556';
+  port = '3200';
+  b_port = '20102';
+  p2p_port = '21102';
 } else {
-  env = 'testnet';
-  db = home + '/testnet';
-  port = '3101';
-  b_port = '44555';
-  p2p_port = '44556';
+  //Currently not supported
+  // env = 'testnet';
+  // db = home + '/testnet';
+  // port = '3101';
+  // b_port = '44555';
+  // p2p_port = '44556';
 }
 port = parseInt(process.env.INSIGHT_PORT) || port;
 
@@ -57,9 +58,9 @@ var isWin = /^win/.test(process.platform);
 var isMac = /^darwin/.test(process.platform);
 var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
-  if (isWin) dataDir = '%APPDATA%\\Dogecoin\\';
-  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Dogecoin/';
-  if (isLinux) dataDir = process.env.HOME + '/.dogecoin/';
+  if (isWin) dataDir = '%APPDATA%\\Verge\\';
+  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Verge/';
+  if (isLinux) dataDir = process.env.HOME + '/.verge/';
 }
 dataDir += network === 'testnet' ? 'testnet3' : '';
 
