@@ -35,5 +35,7 @@ db/blocks
 db/testnet/blocks/*
 db/testnet/blocks
 
+node_modules/
+
 README.html
 public
